@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         idRecyclerViewFilmes = findViewById(R.id.idRecyclerViewFilmes);
 
-        idRecyclerViewFilmes.setLayoutManager(new GridLayoutManager());
+        idRecyclerViewFilmes.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+
+        idRecyclerViewFilmes.setHasFixedSize(true);
+
+        idRecyclerViewFilmes.setAdapter(adapter);
+        /*falta o adapter*/
     }
 }
